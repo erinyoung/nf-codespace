@@ -1,0 +1,21 @@
+{
+    "name": "Nextflow Pipeline",
+    "image": "mcr.microsoft.com/devcontainers/java:17",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+            "version": "latest",
+            "enableNonRootDocker": "true",
+            "moby": "false"
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {}
+    },
+    "postCreateCommand": "curl -s https://get.nextflow.io | bash && sudo mv nextflow /usr/local/bin/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "nextflow.nextflow",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    }
+}
